@@ -26,6 +26,11 @@ import site
 
 DIR_PATH = os.path.dirname(os.path.abspath(__file__))
 
+· custom pyside2 and shiboken install
+t_ext_libs = r"T:\common\lib\blender\python"
+if t_ext_libs not in sys.path:
+    sys.path.insert(0, t_ext_libs)
+
 ext_libs = os.environ.get("PYSIDE2_PYTHONPATH")
 
 if ext_libs and os.path.exists(ext_libs):
